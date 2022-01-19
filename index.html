@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>хехе</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<style>
+    *{
+padding: 0;
+ margin: 0;
+border: 0;
+    }
+    @media (max-width: 500px){
+body{
+display: grid;
+grid-template-rows: 100vh;
+grid-template-columns: 100vw;
+    }
+    .poka{
+        display: none;
+    }
+.heart{
+align-self: center;
+justify-self: center;
+user-select: none;
+animation: scale 5s 1 ease-in-out ;
+}
+.hart{
+    animation: heart 5s infinite ease-in-out;
+}
+.video{
+    display: none;
+    align-self: center;
+justify-self: center;
+user-select: none;
+animation: puk 5s 1 ease-in-out;
+}
+.text{
+    font-family: 'Caveat', cursive;
+    font-size: 5vw;
+    text-align: center;
+    align-self: flex-start;
+justify-self: center;
+user-select: none;
+color: #D7443E;
+}
+.button{
+
+    font-family: 'Caveat', cursive;
+    font-size: 5vw;
+    text-align: center;
+background-color: white;
+
+cursor: pointer;
+margin-top: 10%;
+}
+
+
+@keyframes puk{
+    0%{
+        transform: scale(0,0);
+    }
+
+    80%{
+        transform: scale(1.2,1.2);
+    }
+100%{
+    transform: scale(1,1);
+}
+}
+
+@keyframes heart{
+
+100%{
+    transform: rotate(360deg);
+}
+}
+
+@keyframes scale{
+ 
+    100%{
+        transform: scale(0,0);
+    }
+}
+    }
+    @media (min-width: 501px){
+        .video{
+            display: none;
+        }
+        .heart{
+            display: none;
+        }
+        .poka{
+            align-self: center;
+            justify-self: center;
+             font-family: 'Caveat', cursive;
+             color: #D7443E;
+             font-size: 2vw;
+        }
+        body{
+display: grid;
+grid-template-rows: 100vh;
+grid-template-columns: 100vw;
+    }
+    }
+</style>
+<body>
+<div class="heart">
+<img class="hart" src="heart.svg" style="max-width: 100%; max-height: 100%;"/>
+</div>
+<div class="poka"><h1>Откройте сайт на телефоне пожалуйста</h1></div>
+<div class="video">
+<h1 class="text">хочу делать также с тобой  </h1>
+<video src="videoplayback.mp4" muted="muted" autoplay="autoplay" loop style="max-width: 100%; max-height: 100%; margin-left: 10%;"></video>
+<h1 class="text">ты мне нравишься </h1>
+<div class="button"><button class="button" ><a href="puk/index.html" style="text-decoration: none;              color: #D7443E;" >ты мне тоже</a></button></div>
+</div>
+
+</body>
+<script>
+
+setTimeout(function(){
+   document.getElementsByClassName('heart')[0].style.display='none';
+   document.getElementsByClassName('video')[0].style.display='block';
+},5000);
+</script>
+</html>
